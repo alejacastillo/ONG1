@@ -1,0 +1,40 @@
+﻿@model List<ONG.BL.Desaparecidos>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Base de Datos</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Residencia</th>
+            <th>Edad</th>
+            <th>Genero</th>
+
+        </tr>
+    </thead>
+
+    @foreach (var desaparecidos in Model)
+    {
+        <tr>
+
+            <td> @desaparecidos.Id</td>
+            <td> @desaparecidos.PNombre</td>
+            <td> @desaparecidos.SNombre</td>
+            <td> @desaparecidos.PApellido</td>
+            <td> @desaparecidos.SApellido</td>
+            <td> @desaparecidos.Residencia</td>
+            <td> @desaparecidos.Edad</td>
+            <td> @desaparecidos.Genero</td>
+
+        </tr>
+    }
+
+</table>
+
