@@ -23,7 +23,8 @@ namespace ONG.BL
          modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); 
         }
         public DbSet<Desaparecidos> Desaparecido { get; set; }
-       
+        public DbSet<Categorias> Categorias{ get; set; }
+
     }
-    
+
 }

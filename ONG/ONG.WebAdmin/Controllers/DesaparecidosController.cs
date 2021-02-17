@@ -10,18 +10,18 @@ namespace ONG.WebAdmin.Controllers
     public class DesaparecidosController : Controller
     {
 
-        DesaparecidosBL _desaparecidosBL;
+        DesaparecidosBL _DesaparecidosBL;
 
         public DesaparecidosController()
         {
-            _desaparecidosBL = new DesaparecidosBL();
+            _DesaparecidosBL = new DesaparecidosBL();
         }
 
         // GET: Personas
         public ActionResult Index()
         {
-            var listadeDesaparecidos = _desaparecidosBL.ObtenerDesaparecidos();
-            return View(listadeDesaparecidos);
+            var listaDesaparecidos = _DesaparecidosBL.ObtenerDesaparecidos();
+            return View(listaDesaparecidos);
         }
 
     
@@ -38,7 +38,7 @@ namespace ONG.WebAdmin.Controllers
 
         public ActionResult Crear(Desaparecidos Desaparecidos)
         {
-            _desaparecidosBL.GuardarDesaparecido(Desaparecidos);
+            _DesaparecidosBL.GuardarDesaparecido(Desaparecidos);
 
             return RedirectToAction("Index");
         }
@@ -46,7 +46,7 @@ namespace ONG.WebAdmin.Controllers
 
         public ActionResult Editar( int id)
         {
-            var Desaparecidos = _desaparecidosBL.ObtenerDesaparecidos(id);
+            var Desaparecidos = _DesaparecidosBL.ObtenerDesaparecidos(id);
 
             return View(Desaparecidos);
         }
@@ -54,20 +54,20 @@ namespace ONG.WebAdmin.Controllers
         [HttpPost]
         public ActionResult Editar(Desaparecidos Desaparecidos)
         {
-            _desaparecidosBL.GuardarDesaparecido(Desaparecidos);
+            _DesaparecidosBL.GuardarDesaparecido(Desaparecidos);
 
             return RedirectToAction("Index");
         }
 
         public  ActionResult Detalle(int id)
         {
-            var Desaparecidos = _desaparecidosBL.ObtenerDesaparecidos(id);
+            var Desaparecidos = _DesaparecidosBL.ObtenerDesaparecidos(id);
             return View(Desaparecidos);
         }
 
         public ActionResult Eliminar(int id)
         {
-            var Desaparecidos = _desaparecidosBL.ObtenerDesaparecidos(id);
+            var Desaparecidos = _DesaparecidosBL.ObtenerDesaparecidos(id);
 
             return View(Desaparecidos);
 
@@ -76,7 +76,7 @@ namespace ONG.WebAdmin.Controllers
         [HttpPost]
         public ActionResult  Eliminar(Desaparecidos Desaparecidos)
         {
-            _desaparecidosBL.EliminarDesaparecido(Desaparecidos.Id);
+            _DesaparecidosBL.EliminarDesaparecido(Desaparecidos.Id);
             return RedirectToAction("Index");
         }
     }
