@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ONG.BL.Desaparecidos>
+
+@{
+    ViewBag.Title = "Desaparecidos";
+}
+
+<h2>Desaparecidos</h2>
+
+<p>
+    @Html.ActionLink("Nueva Persona Desaparecida", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Residencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genero)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Residencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genero)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |
+            @Html.ActionLink("Detalle", "Detalle", new { id=item.Id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

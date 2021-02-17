@@ -1,0 +1,80 @@
+﻿@model ONG.BL.Desaparecidos
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro que desea eliminar el archivo?</h3>
+<div>
+    <h4>Desaparecidos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Residencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Residencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
