@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<ONG.BL.Categorias>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Categorias";
 }
 
-<h2>Index</h2>
+<h2 class="text-center">Categorias</h2>
 
 <p>
     @Html.ActionLink("Nueva Categoria", "Crear")
@@ -25,7 +25,7 @@
         <td>
             @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |
             @Html.ActionLink("Detalle", "Detalle", new { id=item.Id }) |
-            @Html.ActionLink("Eliminar", "Elimnar", new { id=item.Id })
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
         </td>
     </tr>
 }

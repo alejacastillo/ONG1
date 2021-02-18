@@ -4,7 +4,7 @@
     ViewBag.Title = "Detalle";
 }
 
-<h2>Detalle</h2>
+<h2 class="text-center">Detalle</h2>
 
 <div>
     <h4>Desaparecidos</h4>
@@ -69,6 +69,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Editar", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar", "Index")
 </p>

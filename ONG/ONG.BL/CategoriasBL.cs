@@ -38,6 +38,8 @@ namespace ONG.BL
             {
                 var CategoriaExistente = _contexto.Categorias.Find(Categorias.Id);
                 CategoriaExistente.Evento = Categorias.Evento;
+                CategoriaExistente.Departamento = Categorias.Departamento;
+                CategoriaExistente.Religion = Categorias.Religion;
 
             }
 
