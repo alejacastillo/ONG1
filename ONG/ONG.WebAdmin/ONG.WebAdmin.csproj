@@ -176,9 +176,9 @@
     <Content Include="Views\Desaparecidos\Eliminar.cshtml" />
     <Content Include="Views\Categoria\Index.cshtml" />
     <Content Include="Views\Categoria\Crear.cshtml" />
+    <Content Include="Views\Categoria\Detalle.cshtml" />
     <Content Include="Views\Categoria\Editar.cshtml" />
     <Content Include="Views\Categoria\Eliminar.cshtml" />
-    <Content Include="Views\Categoria\Detalle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
